@@ -1,0 +1,27 @@
+:root {
+  --ivory: #F5F1E9;
+  --sand: #E8E1D5;
+  --sage: #A2AA96;
+  --forest: #465548;
+  --ink: #282C27;
+  --white: #FFFDF8;
+
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "DM Sans", Arial, sans-serif;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+  --space-9: 7rem;
+  --container: 1280px;
+  --header-height: 92px;
+  --line: rgba(40, 44, 39, 0.16);
+  --shadow: 0 24px 70px rgba(40, 44, 39, 0.12);
+  --ease: cubic-bezier(.2,.65,.3,1);
+  --radius: 2px;
+}

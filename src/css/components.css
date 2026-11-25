@@ -1,0 +1,66 @@
+.site-header {
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  transition: height .35s var(--ease), background-color .35s, box-shadow .35s;
+}
+.site-header.is-scrolled {
+  height: 74px;
+  background: rgba(245, 241, 233, .96);
+  box-shadow: 0 1px 0 var(--line);
+  backdrop-filter: blur(12px);
+}
+.header-inner {
+  width: min(calc(100% - 64px), var(--container));
+  height: 100%;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand { display: inline-flex; flex-direction: column; line-height: 1; }
+.brand-name { font-family: var(--font-serif); font-size: 2.15rem; letter-spacing: -.04em; }
+.brand-detail { margin-top: 5px; font-size: .57rem; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; }
+.main-nav { display: flex; align-items: center; gap: clamp(20px, 2.2vw, 38px); }
+.main-nav > a { font-size: .78rem; font-weight: 500; }
+.main-nav > a:not(.nav-contact) { position: relative; }
+.main-nav > a:not(.nav-contact)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -7px;
+  left: 0;
+  height: 1px;
+  background: var(--ink);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform .25s var(--ease);
+}
+.main-nav > a:not(.nav-contact):hover::after { transform: scaleX(1); transform-origin: left; }
+.nav-contact { padding: 13px 19px; border: 1px solid var(--forest); border-radius: 999px; }
+.nav-contact:hover { background: var(--forest); color: var(--ivory); }
+.menu-toggle { display: none; }
+.button {
+  display: inline-flex;
+  min-height: 54px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: .76rem;
+  font-weight: 600;
+  transition: transform .25s var(--ease), background-color .25s, color .25s;
+}
+.button:hover { transform: translateY(-3px); }
+.button-primary { background: var(--forest); color: var(--ivory); }
+.button-primary:hover { background: var(--ink); }
+.button-light { background: var(--ivory); color: var(--forest); }
+.button-light:hover { background: var(--white); }
+.text-link, .arrow-link { display: inline-flex; align-items: center; gap: 10px; font-size: .78rem; font-weight: 600; }
+.text-link span, .arrow-link span { transition: transform .25s var(--ease); }
+.text-link:hover span { transform: translate(3px, -3px); }
+.arrow-link:hover span { transform: translateX(5px); }
